@@ -38,4 +38,4 @@ docker compose up --build
    - **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ## Скриншоты работы
-![Интерфейс Swagger UI](screenshots/swagger_lab4.png)
+![Интерфейс Swagger UI](screenshots/swagger.png)
