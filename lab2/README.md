@@ -1,7 +1,4 @@
-# Лабораторная работа 2
-
-**После лекций:** 3 (Проектирование HTTP API)  
-**Тема:** REST API для CRUD операций
+# Лабораторная работа 2: REST API для CRUD операций
 
 ## Задачи
 * Проектирование API для сущности (`User`)
@@ -16,15 +13,12 @@
 * **Контейнеризация:** Docker, Docker Compose
 
 ## Структура проекта
-```text
-lab2/
-├── app.py               # Логика REST API, Pydantic-модели и CRUD-эндпоинты
-├── requirements.txt     # Зависимости проекта
-├── Dockerfile           # Сборка Docker-образа
-├── docker-compose.yml   # Запуск контейнера и проброс портов (8000:8000)
-├── screenshots/         # Скриншоты работы Swagger UI
-└── README.md            # Документация к лабораторной работе
-```
+* `app.py`               # Логика REST API, Pydantic-модели и CRUD-эндпоинты
+* `requirements.txt`     # Зависимости проекта
+* `Dockerfile`           # Сборка Docker-образа
+* `docker-compose.yml`   # Запуск контейнера и проброс портов (8000:8000)
+* `screenshots/`         # Скриншоты работы Swagger UI
+* `README.md`            # Документация к лабораторной работе
 
 ## Реализация задач
 
