@@ -68,19 +68,13 @@ docker compose down
 ### Пользователи и профили (`/users`)
 * `GET /users/me` — получение профиля текущего авторизованного пользователя (требуется `Bearer` токен).
 * `PUT /users/me` — обновление данных текущего пользователя (`name`, `age`, `bio`).
-* `GET /users/` — получение списка всех пользователей[cite: 13].
+* `GET /users/` — получение списка всех пользователей.
 * `DELETE /users/me` — удаление профиля текущего пользователя (возвращает статус `204`).
 
-## Скриншоты тестирования
+## Скриншоты (`screenshots/`)
 
-В папке `screenshots/` представлены результаты сборки, миграций и тестирования всех эндпоинтов через Swagger UI:
-
-1. `01_docker_build.png` — успешная сборка образа `lab6-api`.
-2. `02_alembic_upgrade.png` — применение миграции `Initial users table`.
-3. `03_docker_up.png` — запуск сервера Uvicorn внутри контейнера.
-4. `04_swagger_overview.png` — общий интерфейс документации Swagger UI.
-5. `05_register_201.png` — регистрация пользователя (`POST /auth/register`, код `201`).
-6. `06_users_me_get_200.png` — получение профиля с JWT-токеном (`GET /users/me`, код `200`).
-7. `07_users_me_put_200.png` — обновление данных профиля (`PUT /users/me`, код `200`).
-8. `08_users_list_200.png` — просмотр списка пользователей (`GET /users/`, код `200`).
-9. `09_users_me_delete_204.png` — удаление профиля (`DELETE /users/me`, код `204`).
+1. `01_alembic_and_run.png` — миграция Alembic и запуск сервера
+2. `02_register_201.png` — регистрация пользователя (`POST /auth/register`, `201`)
+3. `03_profile_get_200.png` — получение профиля по JWT (`GET /users/me`, `200`)
+4. `04_profile_update_200.png` — обновление профиля (`PUT /users/me`, `200`)
+5. `05_profile_delete_204.png` — удаление профиля (`DELETE /users/me`, `204`)
