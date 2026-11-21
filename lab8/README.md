@@ -42,18 +42,21 @@ lab8/
 ├── main.py
 ├── README.md
 └── requirements.txt
-
+```
 ## Запуск проекта
 
 1. Генерация самоподписанного SSL-сертификата в `nginx/certs/`:
+```
    docker run --rm -v "%cd%\nginx\certs:/etc/nginx/certs" alpine/openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/certs/selfsigned.key -out /etc/nginx/certs/selfsigned.crt -subj "/CN=localhost"
-
+```
 2. Сборка и запуск сервисов (`api` и `nginx`):
+```
    docker compose up --build
-
+```
 3. Инициализация таблиц базы данных:
+```
    docker compose exec api python -c "from app.database import Base, engine; import app.models; Base.metadata.create_all(bind=engine); print('Tables created!')"
-
+```
 Статический файл по HTTPS: https://localhost/static/info.txt
 Swagger UI через Nginx: https://localhost/docs
 
