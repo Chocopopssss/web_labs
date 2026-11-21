@@ -1,0 +1,1 @@
+Static file served by Nginx for Lab 8.

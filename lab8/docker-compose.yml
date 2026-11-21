@@ -1,0 +1,22 @@
+services:
+  api:
+    build: .
+    expose:
+      - "8000"
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_URL=sqlite:///./lab8.db
+      - SECRET_KEY=super-secret-lab8-key
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+      - ./static:/usr/share/nginx/html/static:ro
+    depends_on:
+      - api
